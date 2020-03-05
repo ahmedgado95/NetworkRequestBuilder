@@ -18,7 +18,7 @@ import Foundation
      internal var path: String {
          switch self {
          case .getSearch:
-             return "Search"
+            return Constants.Search
       
          }
      }
