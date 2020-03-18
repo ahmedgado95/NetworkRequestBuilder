@@ -10,17 +10,21 @@ import Foundation
 
  import Alamofire
 
- enum UserRouter: URLRequestBuilder {
+ enum SearchRouter: URLRequestBuilder {
 
      case getSearch(fullAdress: String)
+    case register( name: String , email: String , password: String , code: String , phone: String)
      
      // MARK: - Path
      internal var path: String {
          switch self {
          case .getSearch:
             return Constants.Search
+            
       
-         }
+         case .register:
+            return Constants.Register
+        }
      }
 
      // MARK: - Parameters
@@ -29,7 +33,13 @@ import Foundation
          switch self {
          case .getSearch(let fullAdress):
             params[""] = fullAdress
-         }
+         case .register(let name, let email, let password, let code, let phone):
+            params["name"] = name
+            params["email"] = email
+            params["password"] = password
+            params["code"] = code
+            params["phone"] = phone
+        }
          return params
      }
      

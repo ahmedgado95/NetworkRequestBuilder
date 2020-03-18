@@ -20,7 +20,7 @@ protocol APIRequestHandler: HandleAlamoResponse { }
 
 extension APIRequestHandler where Self: URLRequestBuilder {
 
-    func send<T: CodableInit>(_ decoder: T.Type, data: UploadData? = nil, progress: ((Progress) -> Void)? = nil, then: CallResponse<T>) {
+    func send<T: CodableInit>(_ decoder: T.Type, data: [UploadData]? = nil, progress: ((Progress) -> Void)? = nil, then: CallResponse<T>) {
         if let data = data {
             uploadToServerWith(decoder, data: data, request: self, parameters: self.parameters, progress: progress, then: then)
         }else{
@@ -46,10 +46,12 @@ extension APIRequestHandler where Self: URLRequestBuilder {
 
 extension APIRequestHandler {
     
-    private func uploadToServerWith<T: CodableInit>(_ decoder: T.Type, data: UploadData, request: URLRequestConvertible, parameters: Parameters?, progress: ((Progress) -> Void)?, then: CallResponse<T>) {
+    private func uploadToServerWith<T: CodableInit>(_ decoder: T.Type, data: [UploadData], request: URLRequestConvertible, parameters: Parameters?, progress: ((Progress) -> Void)?, then: CallResponse<T>) {
         
         AF.upload(multipartFormData: { mul in
-            mul.append(data.data, withName: data.name, fileName: data.fileName, mimeType: data.mimeType)
+            for d in data{
+                 mul.append(d.data, withName: d.name, fileName: d.fileName, mimeType: d.mimeType)
+            }
             guard let parameters = parameters else { return }
             for (key, value) in parameters {
                 mul.append("\(value)".data(using: String.Encoding.utf8)!, withName: key as String)

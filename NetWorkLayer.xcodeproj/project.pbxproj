@@ -28,6 +28,7 @@
 		00CCDFCC24065E8500388237 /* SearchTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00CCDFCA24065E8500388237 /* SearchTableCell.xib */; };
 		00CCDFCE24065F0500388237 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CCDFCD24065F0500388237 /* Helper.swift */; };
 		1E21E02291CECEEA32D3367A /* Pods_NetWorkLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E3373443356BFC84EF0296C /* Pods_NetWorkLayer.framework */; };
+		F8802E3224224CF200CE29A0 /* RegisterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8802E3124224CF200CE29A0 /* RegisterModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		0E3373443356BFC84EF0296C /* Pods_NetWorkLayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NetWorkLayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E81E392A4F827F1EB8F998E /* Pods-NetWorkLayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetWorkLayer.release.xcconfig"; path = "Target Support Files/Pods-NetWorkLayer/Pods-NetWorkLayer.release.xcconfig"; sourceTree = "<group>"; };
 		73646C02BEB815E9387ED163 /* Pods-NetWorkLayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetWorkLayer.debug.xcconfig"; path = "Target Support Files/Pods-NetWorkLayer/Pods-NetWorkLayer.debug.xcconfig"; sourceTree = "<group>"; };
+		F8802E3124224CF200CE29A0 /* RegisterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				00CCDFC22405136900388237 /* SearchModel.swift */,
+				F8802E3124224CF200CE29A0 /* RegisterModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -326,6 +329,7 @@
 				007BF4D2240E69C10066B00A /* CodableInit.swift in Sources */,
 				007BF4CD240E5F030066B00A /* AlamofireResponse.swift in Sources */,
 				007BF4B3240E5E230066B00A /* UserRequest.swift in Sources */,
+				F8802E3224224CF200CE29A0 /* RegisterModel.swift in Sources */,
 				007BF4CC240E5F030066B00A /* APIError.swift in Sources */,
 				00CCDFC52406550800388237 /* Constant.swift in Sources */,
 				007BF4CA240E5F030066B00A /* ResponseHandler.swift in Sources */,

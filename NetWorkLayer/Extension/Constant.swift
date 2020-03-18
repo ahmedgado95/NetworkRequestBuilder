@@ -11,5 +11,5 @@ struct Constants {
     static let baseURL = "https://aqratsa.com/api/"
     static let uRLBASEIMAGE = "https://aqratsa.com/akar"
     static let Search = "Search"
-    
+    static let Register = "Register"
 }
